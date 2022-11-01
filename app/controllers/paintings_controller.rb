@@ -1,5 +1,9 @@
 class PaintingsController < ApplicationController
-<<<<<<< HEAD
+  skip_before_action :authenticate_user!, only: :index
+
+  def index
+    @paintings = Painting.all
+  end
   def new
     @painting = Painting.new
   end
@@ -18,11 +22,5 @@ class PaintingsController < ApplicationController
 
   def painting_params
     params.require(:painting).permit(:name, :price, :description)
-=======
-  skip_before_action :authenticate_user!, only: :index
-
-  def index
-    @paintings = Painting.all
->>>>>>> d3de4a625cd2e371ebc458a81f8ef13627f7a41b
   end
 end
