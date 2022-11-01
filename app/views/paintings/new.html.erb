@@ -1,2 +1,10 @@
-<h1>Paintings#new</h1>
-<p>Find me in app/views/paintings/new.html.erb</p>
+<h1>New Painting</h1>
+
+  <%= simple_form_for(@painting) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :price %>
+    <%= f.input :description %>
+    <%= f.submit %>
+  <% end %>
+
+  <%= link_to 'Home', root_path %><br>
