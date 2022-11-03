@@ -4,6 +4,7 @@ class PaintingsController < ApplicationController
   def index
     @paintings = Painting.all
   end
+
   def new
     @painting = Painting.new
   end
