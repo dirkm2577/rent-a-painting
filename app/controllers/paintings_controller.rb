@@ -11,17 +11,21 @@ class PaintingsController < ApplicationController
 
   def create
     @painting = Painting.new(painting_params)
-    if @painting.save
-      redirect_to paintings_path
-      # redirect_to paintings_path(@painting)
+    @painting.user = current_user
+    if @painting.save!
+      redirect_to painting_path(@painting)
     else
       render :new, status: :unprocessable_entity
     end
   end
 
+  def show
+
+  end
+
   private
 
   def painting_params
-    params.require(:painting).permit(:name, :price, :description)
+    params.require(:painting).permit(:name, :price, :description, :image_url)
   end
 end
