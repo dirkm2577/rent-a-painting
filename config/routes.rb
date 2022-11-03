@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
+  get 'paintings/new'
   devise_for :users
   root to: "paintings#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :paintings, only: [:index]
+  resources :paintings
 end
