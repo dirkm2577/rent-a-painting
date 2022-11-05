@@ -13,7 +13,7 @@ class PaintingsController < ApplicationController
     @painting = Painting.new(painting_params)
     @painting.user = current_user
     if @painting.save!
-      redirect_to painting_path(@painting)
+      redirect_to paintings_path
     else
       render :new, status: :unprocessable_entity
     end
