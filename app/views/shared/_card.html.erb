@@ -4,8 +4,7 @@
     <%= link_to painting_path(painting) do %>
     <div class="col">
       <div>
-        <img class="rounded img-fluid d-block w-100 fit-cover" style="height: 500px;" src="<%= painting.image_url %>" />
-        <%= cl_image_tag painting.image_url.key, width: 400, height: 300, crop: :fill %>
+        <%= cl_image_tag painting.photo.key, width: 400, height: 300, crop: :fill %>
           <div class="py-4">
             <h2>Name:<%= painting.name %></h2>
             <p>Price: <%= painting.price %> </p>
