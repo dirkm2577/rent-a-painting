@@ -7,6 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 require "open-uri"
 
+
 # Painting.create(name: "Mona Lisa", description: "Painted between 1503 and 1517, Da Vinci’s alluring portrait has been dogged by two questions since the day it was made: Who’s the subject and why is she smiling?", price: 100)
 # Painting.new(name: "Girl with a Pearl", description: "Johannes Vermeer’s 1665 study of a young woman is startlingly real and startlingly modern, almost as if it were a photograph.", price: 90, image_url: "/app/assets/images/Girl_with_a_Pearl.jpg")
 # Painting.new(name: "The starry Night", description: "Vincent Van Gogh’s most popular painting, The Starry Night was created by Van Gogh at the asylum in Saint-Rémy, where he’d committed himself in 1889.", price: 95, image_url: "/app/assets/images/The_starry_Night.jpg")
