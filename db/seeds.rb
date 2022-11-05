@@ -14,7 +14,7 @@ require "open-uri"
 # Painting.new(name: "The Kiss", description: "Opulently gilded and extravagantly patterned, The Kiss, Gustav Klimt’s fin-de-siècle portrayal of intimacy, is a mix of Symbolism and Vienna Jugendstil, the Austrian variant of Art Nouveau.", price: 100, image_url: "/app/assets/images/The_Kiss.jpg")
 # Painting.destroy_all
 
-file = URI.open("https://res.cloudinary.com/dach7c7ct/image/upload/v1667645192/The_Kiss_ita1ap.jpg")
-painting = Painting.new(name: "The Kiss", description: "Gustav Klimt’s fin-de-siècle portrayal of intimacy", price: 100, user_id: 1)
-painting.photo.attach(io: file, filename: "the_kiss.jpg", content_type: "image/jpg")
+file = URI.open("https://res.cloudinary.com/dach7c7ct/image/upload/v1667645216/Girl_with_a_Pearl_bmjbeu.jpg")
+painting = Painting.new(name: "Girl with a Pearl", description: "Johannes Vermeer’s 1665", price: 100, user_id: 1)
+painting.photo.attach(io: file, filename: "girl_with_pearl.jpg", content_type: "image/jpg")
 painting.save
