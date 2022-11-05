@@ -1,2 +1,8 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+<h1>New Painting</h1>
+
+  <%= simple_form_for [@painting, @booking] do |f| %>
+    <%= f.input :booking_date %>
+    <%= f.submit %>
+  <% end %>
+
+  <%= link_to 'Home', root_path %><br>
