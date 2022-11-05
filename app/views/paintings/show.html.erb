@@ -7,13 +7,11 @@
         </svg></span>
         <div class="text-center text-md-start d-flex flex-column align-items-center align-items-md-start mb-5">
           <div>
-            <h4>Title</h4>
-            <p>Artist:</p>
-            <p>Year:</p>
-            <p>Status:</p>
-            <p>Price:</p>
+            <h4><%= @painting.name %></h4>
+            <p><%= @painting.description %></p>
+            <p><%= @painting.price %></p>
           </div>
-        </div><button class="btn btn-primary" type="button" style="margin-bottom: 0px;margin-top: 0px;background: #212529;font-size: 18px;">Rent painting</button>
+        </div><%= link_to 'Rent Painting', new_painting_booking_path(@painting.id), class: "btn btn-primary", style:"margin-bottom: 0px;margin-top: 0px;background: #212529;font-size: 18px;" %>
       </div>
     </div>
   </div>
