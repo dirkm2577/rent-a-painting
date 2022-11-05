@@ -6,8 +6,8 @@
       <div>
         <%= cl_image_tag painting.photo.key, width: 400, height: 300, crop: :fill %>
           <div class="py-4">
-            <h2>Name:<%= painting.name %></h2>
-            <p>Price: <%= painting.price %> </p>
+            <h2><%= painting.name %></h2>
+            <p>Price/day: <%= painting.price %> </p>
           </div>
       </div>
     </div>

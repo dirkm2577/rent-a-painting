@@ -1,12 +1,4 @@
 <body style="font-family: Montserrat, sans-serif;">
-  <nav class="navbar navbar-light navbar-expand bg-light navigation-clean" style="background: linear-gradient(#378ad7 0%, #93bde4 100%);">
-      <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><span class="bs-icon-md bs-icon-rounded bs-icon-primary shadow d-flex justify-content-center align-items-center me-2 bs-icon"><svg class="bi bi-palette" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
-                      <path d="M8 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm4 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM5.5 7a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm.5 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
-                      <path d="M16 8c0 3.15-1.866 2.585-3.567 2.07C11.42 9.763 10.465 9.473 10 10c-.603.683-.475 1.819-.351 2.92C9.826 14.495 9.996 16 8 16a8 8 0 1 1 8-8zm-8 7c.611 0 .654-.171.655-.176.078-.146.124-.464.07-1.119-.014-.168-.037-.37-.061-.591-.052-.464-.112-1.005-.118-1.462-.01-.707.083-1.61.704-2.314.369-.417.845-.578 1.272-.618.404-.038.812.026 1.16.104.343.077.702.186 1.025.284l.028.008c.346.105.658.199.953.266.653.148.904.083.991.024C14.717 9.38 15 9.161 15 8a7 7 0 1 0-7 7z"></path>
-                  </svg></span><span style="font-family: Montserrat, sans-serif;">Rent a Painting</span></a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1"></button>
-          <div id="navcol-1" class="collapse navbar-collapse"><a class="btn btn-primary ms-auto" role="button" href="#" style="background: rgb(55,138,215);">Sign In</a></div>
-      </div>
-  </nav>
   <header class="text-center text-white masthead">
       <div class="overlay" style="background: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia-cldnry.s-nbcnews.com%2Fimage%2Fupload%2Ft_nbcnews-fp-1200-630%2Cf_auto%2Cq_auto%3Abest%2Fnewscms%2F2017_11%2F1936651%2F2-fk_columna_rota-1936651.jpg&amp;f=1&amp;nofb=1&amp;ipt=a9c68ccb8830d98fbbaaf7361d658535b3bf534970f6df4a8a655aece7c2ffde&amp;ipo=images');"></div>
       <div class="container">
@@ -17,7 +9,9 @@
               <div class="col-md-10 col-lg-8 col-xl-7 mx-auto position-relative">
                   <form>
                       <div class="row">
-                          <div class="col-12 col-md-3 offset-xxl-2" style="margin-right: 2px;"><button class="btn btn-primary btn-lg" type="submit" style="background: rgb(55,138,215);width: 500px;height: 50px;">Check our out stock!</button></div>
+                          <div class="col-12 col-md-3 offset-xxl-2" style="margin-right: 2px;">
+                          <%= link_to 'Check out our stock!', paintings_path, class: "btn btn-primary btn-lg", style: "background: rgb(55,138,215);width: 500px;height: 50px;" %>
+                          </div>
                       </div>
                   </form>
               </div>
@@ -60,29 +54,4 @@
           </div>
       </div>
   </section>
-  <footer class="bg-light footer" style="background: linear-gradient(#378ad7 0%, #93bde4 100%);">
-      <div class="container">
-          <div class="row">
-              <div class="col-lg-6 text-center text-lg-start my-auto h-100">
-                  <ul class="list-inline mb-2">
-                      <li class="list-inline-item"><a href="#">About</a></li>
-                      <li class="list-inline-item"><span>⋅</span></li>
-                      <li class="list-inline-item"><a href="#">Contact</a></li>
-                      <li class="list-inline-item"><span>⋅</span></li>
-                      <li class="list-inline-item"><a href="#">Terms of  Use</a></li>
-                      <li class="list-inline-item"><span>⋅</span></li>
-                      <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-                  </ul>
-                  <p class="text-muted small mb-4 mb-lg-0">© Rent a Painting 2022</p>
-              </div>
-              <div class="col-lg-6 text-center text-lg-end my-auto h-100">
-                  <ul class="list-inline mb-0">
-                      <li class="list-inline-item"><a href="#"><i class="fa fa-facebook fa-2x fa-fw" style="color: rgb(55,138,215);"></i></a></li>
-                      <li class="list-inline-item"><a href="#"><i class="fa fa-twitter fa-2x fa-fw" style="color: rgb(55,138,215);"></i></a></li>
-                      <li class="list-inline-item"><a href="#"><i class="fa fa-instagram fa-2x fa-fw" style="color: rgb(55,138,215);"></i></a></li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-  </footer>
 </body>
