@@ -21,8 +21,12 @@
             <li class="nav-item"><a class="nav-link" href="/paintings/new" style="font-family: Montserrat, sans-serif">Add Painting</a></li>
           <% end %>
         </ul>
-        <button class="btn btn-primary" type="button" style="margin-right: 12px;background: linear-gradient(#378ad7, #93bde4 100%);font-family: Montserrat, sans-serif;border-radius: 15;border-color: rgb(55,138,215);"><span style="color: rgb(0, 0, 0);"><%= link_to "Login", new_user_session_path, class: "nav-link" %></span></button>
-        <button class="btn btn-primary" type="button" style="margin-right: 12px;background: linear-gradient(#378ad7, #93bde4 100%);font-family: Montserrat, sans-serif;border-radius: 15;border-color: rgb(55,138,215);"><span style="color: rgb(0, 0, 0);"><%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "nav-link" %></span></button>
+        <% if user_signed_in? == false %>
+          <button class="btn btn-primary" type="button" style="margin-right: 12px;background: linear-gradient(#378ad7, #93bde4 100%);font-family: Montserrat, sans-serif;border-radius: 15;border-color: rgb(55,138,215);"><span style="color: rgb(0, 0, 0);"><%= link_to "Login", new_user_session_path, class: "nav-link" %></span></button>
+        <% end %>
+        <% if user_signed_in? %>
+          <button class="btn btn-primary" type="button" style="margin-right: 12px;background: linear-gradient(#378ad7, #93bde4 100%);font-family: Montserrat, sans-serif;border-radius: 15;border-color: rgb(55,138,215);"><span style="color: rgb(0, 0, 0);"><%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "nav-link" %></span></button>
+        <% end %>
     </div>
   </div>
 </nav>
