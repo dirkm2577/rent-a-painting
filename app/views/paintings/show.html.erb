@@ -11,7 +11,7 @@
           <div>
             <h4><%= @painting.name %></h4>
             <p><%= @painting.description %></p>
-            <p><%= @painting.price %></p>
+            <p><i class="fa-solid fa-sterling-sign"><%= @painting.price %></i></p>
           </div>
         </div><%= link_to 'Rent Painting', new_painting_booking_path(@painting.id), class: "btn btn-primary", style:"margin-bottom: 0px;margin-top: 0px;background: #212529;font-size: 18px;" %>
       </div>
