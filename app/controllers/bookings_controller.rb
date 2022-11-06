@@ -16,7 +16,7 @@ class BookingsController < ApplicationController
     # raise
     @booking.painting = @painting
     if @booking.save!
-      redirect_to painting_bookings_path(@painting)
+      redirect_to bookings_path
     else
       render :new, status: :unprocessable_entity
     end

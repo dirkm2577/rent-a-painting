@@ -16,9 +16,11 @@
     </button>
     <div id="navcol-1" class="collapse navbar-collapse">
         <ul class="navbar-nav me-auto">
-          <li class="nav-item"><a class="nav-link active" href="/paintings" style="font-family: Montserrat, sans-serif;">Home</a></li>
           <% if user_signed_in? %>
-            <li class="nav-item"><a class="nav-link" href="/paintings/new" style="font-family: Montserrat, sans-serif">Add Painting</a></li>
+            <li class="nav-item"><a class="nav-link active" href="/paintings/new" style="font-family: Montserrat, sans-serif">Add Painting</a></li>
+          <% end %>
+          <% if user_signed_in? %>
+            <li class="nav-item"><a class="nav-link active" href="/bookings" style="font-family: Montserrat, sans-serif;">My Bookings</a></li>
           <% end %>
         </ul>
         <button class="btn btn-primary" type="button" style="margin-right: 12px;background: linear-gradient(#378ad7, #93bde4 100%);font-family: Montserrat, sans-serif;border-radius: 15;border-color: rgb(55,138,215);"><span style="color: rgb(0, 0, 0);"><%= link_to "Login", new_user_session_path, class: "nav-link" %></span></button>
