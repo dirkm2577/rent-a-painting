@@ -1,6 +1,8 @@
-<h1>Your bookings</h1>
-<ol>
-  <% @bookings.each do |booking| %>
-    <li>You have booked the <%= booking.painting.name %> on <%= booking.booking_date %></li>
-  <% end %>
-</ol>
+<div class='container'>
+  <h1>Your bookings</h1>
+  <ol>
+    <% @bookings.each do |booking| %>
+      <li>You have booked the <%= booking.painting.name %> on <%= booking.booking_date %></li>
+    <% end %>
+  </ol>
+</div>
