@@ -64,3 +64,21 @@
   border-color: rgb(55,138,215);
 }
 
+.overlay {
+  background: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia-cldnry.s-nbcnews.com%2Fimage%2Fupload%2Ft_nbcnews-fp-1200-630%2Cf_auto%2Cq_auto%3Abest%2Fnewscms%2F2017_11%2F1936651%2F2-fk_columna_rota-1936651.jpg&f=1&nofb=1&ipt=a9c68ccb8830d98fbbaaf7361d658535b3bf534970f6df4a8a655aece7c2ffde&ipo=images");
+}
+
+header.masthead .overlay {
+  position: absolute;
+  background-color: #212529;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: .3;
+}
+
+.features-icons {
+  background: linear-gradient(#378ad7 0%, #93bde4 100%);
+  margin-top: 0px;
+}
