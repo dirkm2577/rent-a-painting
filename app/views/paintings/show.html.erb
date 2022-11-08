@@ -1,7 +1,7 @@
 <div class="container py-4 py-xl-5" style="background: #93bde4;font-family: Montserrat, sans-serif;">
   <div class="row row-cols-1 row-cols-md-2">
     <div class="col">
-      <%= cl_image_tag @painting.photo.key, width: 400, height: 300, crop: :fill %>
+      <%= cl_image_tag(@painting.photo.key, :cloud_name => "dfe5bng4a",  width: 400, height: 300, crop: :fill) %>
     </div>
       <div class="col d-flex flex-column justify-content-center p-4"><span class="bs-icon-md bs-icon-rounded bs-icon-primary shadow d-flex justify-content-center align-items-center me-2 bs-icon" style="margin-bottom: 9px;background: #93bde4;border-style: solid;border-color: #588dbf;"><svg class="bi bi-palette" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
         <path d="M8 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm4 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM5.5 7a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm.5 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
@@ -11,7 +11,7 @@
           <div>
             <h4><%= @painting.name %></h4>
             <p><%= @painting.description %></p>
-            <p><%= @painting.price %></p>
+            <p><i class="fa-solid fa-sterling-sign"><%= @painting.price %></i></p>
           </div>
         </div><%= link_to 'Rent Painting', new_painting_booking_path(@painting.id), class: "btn btn-primary", style:"margin-bottom: 0px;margin-top: 0px;background: #212529;font-size: 18px;" %>
       </div>

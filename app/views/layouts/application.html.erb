@@ -10,9 +10,10 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
-    <%= yield %>
-
+    <div style="min-height: 100vh;">
+      <%= render 'shared/navbar' %>
+      <%= yield %>
+    </div>
     <%= render "shared/flashes" %>
     <%= render 'shared/footer' %>
   </body>
