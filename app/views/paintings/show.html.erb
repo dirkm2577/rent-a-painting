@@ -4,7 +4,7 @@
       <div class="col d-flex flex-column justify-content-center p-4">
         <div class="text-center text-md-start d-flex flex-column align-items-center align-items-md-start mb-5">
           <div class="text-center">
-            <%= cl_image_tag(@painting.photo.key, :cloud_name => "dfe5bng4a", width: 400, height: 300, crop: :fill) %>
+            <%= cl_image_tag(@painting.photo.key, :cloud_name => "dfe5bng4a", width: 800, crop: :scale) %>
             <h3 style="margin-top: 10px;"><%= @painting.name %></h3>
             <p><%= @painting.description %></p>
             <p><i class="fa-solid fa-sterling-sign"><%= @painting.price %></i> per day</p>
