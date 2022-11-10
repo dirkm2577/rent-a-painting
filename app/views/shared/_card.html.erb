@@ -1,39 +1,15 @@
 <div class="container py-4 py-xl-5">
-  <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-">
+  <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
     <% @paintings.each do |painting| %>
-    <%= link_to painting_path(painting) do %>
-    <div class="col">
-      <div class="row">
-        <div class= "card-trip">
-          <%= cl_image_tag(painting.photo.key, :cloud_name => "dfe5bng4a") %>
-            <div class="py-4 card-trip-infos">
-              <h2><%= painting.name %></h2>
-              <div class=card-trip-pricing>
-                <h2><%= painting.price %>€</h2>
-              </div>
-            </div>
+      <%= link_to painting_path(painting) do %>
+        <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 400px;" <%= cl_image_tag(painting.photo.key, :cloud_name => "dfe5bng4a") %>
+          <div class="card-body p-4">
+            <h4 class="card-title"><%= painting.name %></h4>
+            <p class="card-text">Price/day: <%= painting.price %>€</p>
+          </div>
         </div>
-      </div>
-    </div>
       <% end %>
     <% end %>
   </div>
 </div>
 
-
-<%# <div class="container">
-
-  <div class="">
-    <div>
-      <h2>Title here</h2>
-      <p>Short description here!</p>
-    </div>
-    <h2 class="card-trip-pricing">£99.99</h2>
-  </div>
-</div>
-</div> %>
-
-
-
-
-<%# , width: 300, height: 200, crop: :fill %>

@@ -1,32 +1,15 @@
-.card-trip {
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+img {
+  width: 100%; /* or any custom size */
+  height: 100%;
+  // object-fit:scale-down;
 }
 
-.card-trip > img {
-  height: 300px;
-  width: 100%;
-  object-fit: cover;
+.card-title {
+  text-decoration: underline;
+  text-decoration-color: white ;
 }
 
-.card-trip h2 {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.card-trip p {
-  font-size: 14px;
-  opacity: .7;
-  margin: 0;
-}
-
-
-.card-trip .card-trip-infos {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
+.card-text{
+  text-decoration: underline;
+  text-decoration-color: white ;
 }
