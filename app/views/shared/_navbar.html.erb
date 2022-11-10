@@ -10,25 +10,22 @@
       </span>
       <span style="font-family: Montserrat, sans-serif;">Rent a Painting</span>
     </a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-1">
-      <span class="visually-hidden">Toggle navigation</span>
-      <span class="navbar-toggler-icon"></span>
-    </button>
+
     <div id="navcol-1" class="collapse navbar-collapse">
-        <ul class="navbar-nav me-auto">
+        <ul class="navbar-nav ms-auto">
           <% if user_signed_in? %>
-            <li class="nav-item"><a class="nav-link active" href="/paintings/new" style="font-family: Montserrat, sans-serif">Add Painting</a></li>
+            <li class="nav-item"><a class="nav-link active" href="/paintings/new" style="margin-top: 8px; font-family: Montserrat, sans-serif">Add Painting</a></li>
           <% end %>
           <% if user_signed_in? %>
-            <li class="nav-item"><a class="nav-link active" href="/bookings" style="font-family: Montserrat, sans-serif;">My Bookings</a></li>
+            <li class="nav-item"><a class="nav-link active" href="/bookings" style="margin-top: 8px; font-family: Montserrat, sans-serif;">My Bookings</a></li>
+          <% end %>
+          <% if user_signed_in? == false %>
+            <button class="btn btn-primary" type="button" style="margin-right: 12px; background: linear-gradient(#378ad7, #93bde4 100%);font-family: Montserrat, sans-serif;border-radius: 15;border-color: rgb(55,138,215);"><span style="color: rgb(0, 0, 0);"><%= link_to "Login", new_user_session_path, class: "nav-link" %></span></button>
+          <% end %>
+          <% if user_signed_in? %>
+            <button class="btn btn-primary" type="button" style="margin-right: 12px; background: linear-gradient(#378ad7, #93bde4 100%);font-family: Montserrat, sans-serif;border-color: rgb(55,138,215);"><%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "nav-link" %></button>
           <% end %>
         </ul>
-        <% if user_signed_in? == false %>
-          <button class="btn btn-primary" type="button" style="margin-right: 12px;background: linear-gradient(#378ad7, #93bde4 100%);font-family: Montserrat, sans-serif;border-radius: 15;border-color: rgb(55,138,215);"><span style="color: rgb(0, 0, 0);"><%= link_to "Login", new_user_session_path, class: "nav-link" %></span></button>
-        <% end %>
-        <% if user_signed_in? %>
-          <button class="btn btn-primary" type="button" style="margin-right: 12px;background: linear-gradient(#378ad7, #93bde4 100%);font-family: Montserrat, sans-serif;border-radius: 15;border-color: rgb(55,138,215);"><span style="color: rgb(0, 0, 0);"><%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "nav-link" %></span></button>
-        <% end %>
     </div>
   </div>
 </nav>
