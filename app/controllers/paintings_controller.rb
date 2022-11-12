@@ -3,6 +3,11 @@ class PaintingsController < ApplicationController
 
   def index
     @paintings = Painting.all
+    if params[:query].present?
+      @paintings = Painting.where("name ILIKE ?", "%#{params[:query]}%")
+    else
+      @paintings = Painting.all
+    end
   end
 
   def new
