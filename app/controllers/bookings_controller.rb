@@ -6,14 +6,12 @@ class BookingsController < ApplicationController
   end
 
   def new
-    @painting = Painting.find(params[:painting_id])
     @booking = Booking.new
   end
 
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-    # raise
     @booking.painting = @painting
     if @booking.save!
       redirect_to bookings_path
@@ -22,8 +20,11 @@ class BookingsController < ApplicationController
     end
   end
 
-  def show
-  end
+def destroy
+  @booking = Booking.find(params[:id])
+  @booking.destroy
+  redirect_to bookings_path, status: :see_other
+end
 
   private
 

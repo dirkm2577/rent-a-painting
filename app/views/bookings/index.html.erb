@@ -3,6 +3,12 @@
   <ol>
     <% @bookings.each do |booking| %>
       <li>You have booked the <strong><%= booking.painting.name %></strong> from <strong><%= booking.booking_date.strftime('%A %d %b %Y') %> until <%= booking.return_date.strftime('%A %d %b %Y') %></strong></li>
+      <%= 
+        link_to 'Delete', 
+        booking_path(booking.id),
+        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+      %>
     <% end %>
   </ol>
 </div>
+
