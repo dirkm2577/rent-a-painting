@@ -36,7 +36,7 @@ painting = Painting.new(
   The work is oil on canvas and is 44.5 cm (17.5 in) high and 39 cm (15 in) wide. It is signed 'IVMeer' but not dated. It is estimated to have been painted around 1665.
   After the most recent restoration of the painting in 1994, the subtle colour scheme and the intimacy of the girl's gaze toward the viewer have been greatly enhanced. During the restoration, it was discovered that the dark background, today somewhat mottled, was originally a deep enamel-like green. This effect was produced by applying a thin transparent layer of paint—a glaze—over the black background seen now. However, the two organic pigments of the green glaze, indigo and weld, have faded.
   ",
-  price: 3000,
+  price: 100,
   user: user1
 )
 painting.photo.attach(io: file, filename: "girl_with_a_pearl_earring.jpg", content_type: "image/jpg")
@@ -49,7 +49,7 @@ painting = Painting.new(
   The oil-on-canvas painting is dominated by a night sky roiling with chromatic blue swirls, a glowing yellow crescent moon, and stars rendered as radiating orbs. One or two cypress trees, often described as flame-like, tower over the foreground to the left, their dark branches curling and swaying to the movement of the sky that they partly obscure. Amid all this animation, a structured village sits in the distance on the lower right of the canvas. Straight controlled lines make up the small cottages and the slender steeple of a church, which rises as a beacon against rolling blue hills. The glowing yellow squares of the houses suggest the welcoming lights of peaceful homes, creating a calm corner amid the painting’s turbulence.
   Van Gogh painted The Starry Night during his 12-month stay at the Saint-Paul-de-Mausole asylum near Saint-Rémy-de-Provence, France, several months after suffering a breakdown in which he severed a part of his own ear with a razor. While at the asylum, he painted during bursts of productivity that alternated with moods of despair. As an artist who preferred working from observation, van Gogh was limited to the subjects that surrounded him—his own likeness, views outside his studio window, and the surrounding countryside that he could visit with a chaperone.
   ",
-  price: 5000,
+  price: 110,
   user: user1
 )
 painting.photo.attach(io: file, filename: "mona_lisa.jpg", content_type: "image/jpg")
@@ -62,7 +62,7 @@ painting = Painting.new(
   The Scream is one of the most familiar images in modern art. It stemmed from a panic attack that Munch suffered in 1892. He described how it occurred, as he was strolling along a path outside Kristiania (now Oslo): “The sun was setting and the clouds turned as red as blood. I sensed a scream passing through nature. I felt as though I could actually hear the scream. I painted this picture, painted the clouds like real blood. The colors shrieked.” Munch represented the scream through a series of undulating lines that pressed in on the figure like shock waves, reducing its face to a primal image of fear. He accentuated this effect by showing that his two companions were unscathed, thus implying that the trauma came from his own mind, rather than the world outside. On a copy of the picture, Munch wrote: “Could only have been painted by a madman.”
   The Scream has become a popular representation of the human condition. The painting’s central figure has appeared throughout Western popular culture in everything from television to emoji, and it has been parodied in motion pictures, including, arguably, Macaulay Culkin’s iconic grimace in John Hughes’s Home Alone.
   ",
-  price: 25000,
+  price: 90,
   user: user1
 )
 painting.photo.attach(io: file, filename: "mona_lisa.jpg", content_type: "image/jpg")
@@ -75,7 +75,7 @@ painting = Painting.new(
   Although the two are not a pair, the painting is inevitably discussed with Botticelli's other very large mythological painting, the Primavera, also in the Uffizi. They are among the most famous paintings in the world, and icons of the Italian Renaissance; of the two, the Birth is better known than the Primavera.] As depictions of subjects from classical mythology on a very large scale they were virtually unprecedented in Western art since classical antiquity, as was the size and prominence of a nude female figure in the Birth. It used to be thought that they were both commissioned by the same member of the Medici family, but this is now uncertain.
   They have been endlessly analysed by art historians, with the main themes being: the emulation of ancient painters and the context of wedding celebrations (generally agreed), the influence of Renaissance Neo-Platonism (somewhat controversial), and the identity of the commissioners (not agreed). Most art historians agree, however, that the Birth does not require complex analysis to decode its meaning, in the way that the Primavera probably does. While there are subtleties in the painting, its main meaning is a straightforward, if individual, treatment of a traditional scene from Greek mythology, and its appeal is sensory and very accessible, hence its enormous popularity.
   ",
-  price: 15000,
+  price: 120,
   user: user1
 )
 painting.photo.attach(io: file, filename: "mona_lisa.jpg", content_type: "image/jpg")
@@ -90,7 +90,7 @@ painting = Painting.new(
   Michelangelo was originally commissioned to paint the Twelve Apostles on the triangular pendentives that supported the ceiling, and cover the central part of the ceiling with ornament. Michelangelo persuaded Pope Julius to give him a free hand and proposed a different and more complex scheme, representing the Creation, the Fall of Man, the Promise of Salvation through the prophets, and the genealogy of Christ. The work is part of a larger scheme of decoration within the chapel which represents much of the doctrine of the Catholic Church.
   The composition stretches over 500 square metres of ceiling, and contains over 300 figures. At its centre are nine episodes from the Book of Genesis, divided into three groups: God's Creation of the Earth; God's Creation of Humankind and their fall from God's grace; and lastly, the state of Humanity as represented by Noah and his family. On the pendentives supporting the ceiling are painted twelve men and women who prophesied the coming of Jesus; seven prophets of Israel and five Sibyls, prophetic women of the Classical world. Among the most famous paintings on the ceiling are The Creation of Adam, Adam and Eve in the Garden of Eden, the Deluge, the Prophet Jeremiah and the Cumaean Sibyl.
   ",
-  price: 35000,
+  price: 70,
   user: user1
 )
 painting.photo.attach(io: file, filename: "mona_lisa.jpg", content_type: "image/jpg")
