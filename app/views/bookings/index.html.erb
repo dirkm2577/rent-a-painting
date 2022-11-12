@@ -4,12 +4,16 @@
     <div class="card-product">
       <img <%= cl_image_tag(booking.painting.photo.key, :cloud_name => "dfe5bng4a") %>
       <div class="card-product-infos">
-        <span>You have booked the <strong><%= booking.painting.name %></strong> from <strong><%= booking.booking_date.strftime('%A %d %b %Y') %> until <%= booking.return_date.strftime('%A %d %b %Y') %></strong></span>
+        <div class="card-product-infos-description">
+          <span>You have booked the <strong><%= booking.painting.name %></strong> from <strong><%= booking.booking_date.strftime('%A %d %b %Y') %> until <%= booking.return_date.strftime('%A %d %b %Y') %></strong></span>
+        </div>
+        <div class="card-product-buttons">
+          <%= link_to 'Edit', edit_painting_booking_path(booking.painting.id, booking.id), class: "btn btn-primary" %>
+          <%= link_to 'Delete',
+            booking_path(booking.id), class: "btn btn-primary",
+            data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+        </div>
       </div>
-      <%= link_to 'Edit', edit_painting_booking_path(booking.painting.id, booking.id), class: "btn btn-primary" %>
-      <%= link_to 'Delete',
-        booking_path(booking.id), class: "btn btn-primary",
-        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
     </div>
     <% end %>
 </div>

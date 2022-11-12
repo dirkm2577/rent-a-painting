@@ -6,7 +6,7 @@
           <img class="card-img-top w-100 d-block fit-cover" style="height: 400px;" <%= cl_image_tag(painting.photo.key, :cloud_name => "dfe5bng4a") %>
           <div class="card-body p-4">
             <h4 class="card-title"><strong><%= painting.name %></strong></h4>
-            <p class="card-text"><strong>Price/day: <%= painting.price %>€</strong></p>
+            <p class="card-text"><strong>Price/day: £<%= painting.price %></strong></p>
           </div>
         </div>
       <% end %>
