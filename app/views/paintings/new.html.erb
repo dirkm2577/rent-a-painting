@@ -1,13 +1,11 @@
-<div class="container">
-  <h1>New Painting</h1>
+<div class="container" style="background: #93bde4;font-family: Montserrat, sans-serif; margin-top: 20px; margin-bottom: 20px; border-radius: 10px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+  <h1 style="padding-top: 20px;"><strong>New Painting</strong></h1>
 
   <%= simple_form_for(@painting) do |f| %>
-    <%= f.input :name %>
-    <%= f.input :price %>
-    <%= f.input :description %>
+    <%= f.input :name, placeholder: 'Name of the painting' %>
+    <%= f.input :price, placeholder: 'in ￡ per day' %>
+    <%= f.input :description, placeholder: 'things to know about this painting' %>
     <%= f.input :photo, as: :file %>
-    <%= f.submit %>
+    <%= f.submit "Add Painting", :class => "btn btn-primary", :style => "margin-bottom: 25px; margin-top: 10px; font-size: 20px;" %>
   <% end %>
-
-  <%= link_to 'Home', root_path %><br>
 </div>

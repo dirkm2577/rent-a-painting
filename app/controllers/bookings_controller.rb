@@ -1,19 +1,17 @@
 class BookingsController < ApplicationController
-  before_action :set_article, only: [:new, :create]
+  before_action :set_article, only: [:new, :create, :edit]
 
   def index
     @bookings = Booking.all
   end
 
   def new
-    @painting = Painting.find(params[:painting_id])
     @booking = Booking.new
   end
 
   def create
     @booking = Booking.new(booking_params)
     @booking.user = current_user
-    # raise
     @booking.painting = @painting
     if @booking.save!
       redirect_to bookings_path
@@ -22,7 +20,21 @@ class BookingsController < ApplicationController
     end
   end
 
-  def show
+  def update
+    @booking = Booking.find(params[:id])
+    if @booking.update(booking_params)
+      redirect_to bookings_path
+    end
+  end
+
+  def edit
+    @booking = Booking.find(params[:id])
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to bookings_path, status: :see_other
   end
 
   private
