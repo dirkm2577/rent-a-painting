@@ -3,7 +3,7 @@
   <div class="container">
     <div class=" card-product container">
       <% @bookings.each do |booking| %>
-      <img <%= cl_image_tag(booking.painting.photo.key, :cloud_name => "dfe5bng4a") %>
+      <img <%= cl_image_tag(booking.painting.photo.key, :cloud_name => "dfe5bng4a") %>>
         <div class="card-product-infos">
           <li>You have booked the <strong><%= booking.painting.name %></strong> from <strong><%= booking.booking_date.strftime('%A %d %b %Y') %> until <%= booking.return_date.strftime('%A %d %b %Y') %></strong></li>
         </div>
