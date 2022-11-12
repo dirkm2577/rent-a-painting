@@ -1,0 +1,10 @@
+<div class='container'>
+  <h1>Edit Painting</h1>
+  <div>
+    <%= simple_form_for [@painting, @booking] do |f| %>
+      <%= f.input :booking_date, label: 'From', html5: true %>
+      <%= f.input :return_date, label: 'To', html5: true %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
