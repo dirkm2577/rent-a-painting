@@ -1,12 +1,12 @@
-<div class='container'>
-  <h1>New Painting</h1>
+<div class='container' style="background: #93bde4;font-family: Montserrat, sans-serif; margin-top: 20px; margin-bottom: 20px; border-radius: 10px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+  <h1 style="padding-top: 20px;"><strong>New Booking</strong></h1>
 
   <div data-controller="auto-calculate-cost">
     <div>
       <%= simple_form_for [@painting, @booking] do |f| %>
         <%= f.input :booking_date, label: 'From', html5: true %>
         <%= f.input :return_date, label: 'To', html5: true %>
-        <%= f.submit %>
+        <%= f.submit "Add Booking", :class => "btn btn-primary", :style => "margin-bottom: 25px; margin-top: 10px; font-size: 20px;" %>
       <% end %>
     </div>
 
@@ -14,6 +14,4 @@
       <p data-action="submit->auto-calculate-cost#autocalc"><p>
     </div>
   </div>
-
-  <%= link_to 'Home', paintings_path %><br>
 </div>
