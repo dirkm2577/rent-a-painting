@@ -1,6 +1,9 @@
-<h1>Your bookings</h1>
-<ol>
-  <% @bookings.each do |booking| %>
-    <li>You have booked the <%= booking.painting.name %> on <%= booking.booking_date %></li>
-  <% end %>
-</ol>
+<div class='container'>
+<div class=>
+  <h1>Your bookings</h1>
+  <ol>
+    <% @bookings.each do |booking| %>
+      <li>You have booked the <strong><%= booking.painting.name %></strong> from <strong><%= booking.booking_date.strftime('%A %d %b %Y') %> until <%= booking.return_date.strftime('%A %d %b %Y') %></strong></li>
+    <% end %>
+  </ol>
+</div>

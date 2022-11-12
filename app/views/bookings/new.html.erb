@@ -1,8 +1,19 @@
-<h1>New Painting</h1>
+<div class='container'>
+  <h1>New Painting</h1>
 
-  <%= simple_form_for [@painting, @booking] do |f| %>
-    <%= f.input :booking_date %>
-    <%= f.submit %>
-  <% end %>
+  <div data-controller="auto-calculate-cost">
+    <div>
+      <%= simple_form_for [@painting, @booking] do |f| %>
+        <%= f.input :booking_date, label: 'From', html5: true %>
+        <%= f.input :return_date, label: 'To', html5: true %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+
+    <div>
+      <p data-action="submit->auto-calculate-cost#autocalc"><p>
+    </div>
+  </div>
 
   <%= link_to 'Home', paintings_path %><br>
+</div>
